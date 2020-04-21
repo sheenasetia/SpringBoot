@@ -1,35 +1,36 @@
 package com.sheena.microservices.models;
 
 public class CatalogItem {
-	private String name;
-	private String desc;
-	private int rating;
+	private String movieName;
+	private String movieDescription;
+	private int movieRating;
 	public CatalogItem() {
 		super();
 	}
-	public CatalogItem(String name, String desc, int rating) {
+	
+	public CatalogItem(String movieName, String movieDescription, int movieRating) {
 		super();
-		this.name = name;
-		this.desc = desc;
-		this.rating = rating;
+		this.movieName = movieName;
+		this.movieDescription = movieDescription;
+		this.movieRating = movieRating;
 	}
-	public String getName() {
-		return name;
+	public String getMovieName() {
+		return movieName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
 	}
-	public String getDesc() {
-		return desc;
+	public String getMovieDescription() {
+		return movieDescription;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setMovieDescription(String movieDescription) {
+		this.movieDescription = movieDescription;
 	}
-	public int getRating() {
-		return rating;
+	public int getMovieRating() {
+		return movieRating;
 	}
-	public void setRating(int rating) {
-		this.rating = rating;
+	public void setMovieRating(int movieRating) {
+		this.movieRating = movieRating;
 	}
 	
 }

@@ -13,6 +13,6 @@ public class MovieResource {
 	@RequestMapping("/{movieId}")
 	public Movie getMovieInfo(@PathVariable String movieId)
 	{
-		return new Movie("Test Name",movieId);
+		return new Movie("Demo Name "+movieId,movieId);
 	}
 }
