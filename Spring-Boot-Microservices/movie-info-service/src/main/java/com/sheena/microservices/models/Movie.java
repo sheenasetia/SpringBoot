@@ -2,10 +2,10 @@ package com.sheena.microservices.models;
 
 public class Movie {
 	private String movieName;
-	private int movieId;
+	private String movieId;
 	
 	public Movie() {}
-	public Movie(String movieName, int movieId) {
+	public Movie(String movieName, String movieId) {
 		super();
 		this.movieName = movieName;
 		this.movieId = movieId;
@@ -16,10 +16,10 @@ public class Movie {
 	public void setMovieName(String movieName) {
 		this.movieName = movieName;
 	}
-	public int getMovieId() {
+	public String getMovieId() {
 		return movieId;
 	}
-	public void setMovieId(int movieId) {
+	public void setMovieId(String movieId) {
 		this.movieId = movieId;
 	}
 	

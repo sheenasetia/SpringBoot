@@ -11,7 +11,7 @@ import com.sheena.microservices.models.Movie;
 public class MovieResource {
 
 	@RequestMapping("/{movieId}")
-	public Movie getMovieInfo(@PathVariable int movieId)
+	public Movie getMovieInfo(@PathVariable String movieId)
 	{
 		return new Movie("Test Name",movieId);
 	}

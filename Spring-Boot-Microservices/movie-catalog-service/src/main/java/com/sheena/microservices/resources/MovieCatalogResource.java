@@ -32,10 +32,10 @@ public class MovieCatalogResource {
 		
 		//second argument of the rest template function is the type u gotta cast the return value to 
 		//ratings service will return all the movies (ID and Ratings) that a user has watched
-		UserRating ratings = restTemplate.getForObject( "http://localhost:8081/users/"+userId,UserRating.class);
+		UserRating ratings = restTemplate.getForObject( "http://ratings-data-service/ratingsData/users/"+userId,UserRating.class);
 		//movie-info service will return movie_name corresponding to every movie id
 		return ratings.getUserRating().stream().map(rating -> {
-		Movie movie=restTemplate.getForObject( "http://localhost:8081/movies/"+rating.getMovieId(),Movie.class);
+		Movie movie=restTemplate.getForObject( "http://movie-info-service/movies/"+rating.getMovieId(),Movie.class);
 		return new CatalogItem(movie.getMovieName(),"Test" ,rating.getRating());
 		})
 				.collect(Collectors.toList());
